@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Get started with Javascript",
   "scripts": {
-    "start": "npm install",
-    "test:local": "open SpecRunner.html",
-    "test:remote": "karma start"
+    "start": "npm install"
   },
   "keywords": [],
   "author": "Web Bae",
