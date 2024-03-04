@@ -9,36 +9,21 @@ const timestamp = document.querySelector("#timestamp");
  * @returns {void}
  * If video is paused, play it. If video is playing, pause it.
  */
-function playPause() {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-}
+function playPause() {}
 
 /**
  * Stop video
  * @returns {void}
  * Set video time to 0 and pause video
  */
-function stopVideo() {
-  video.currentTime = 0;
-  video.pause();
-}
+function stopVideo() {}
 
 /**
  * Update play button icon
  * @returns {void}
  * If video is paused, show play icon. If video is playing, show pause icon.
  */
-function updatePlayButtonText() {
-  if (video.paused) {
-    play.innerHTML = "Play";
-  } else {
-    play.innerHTML = "Pause";
-  }
-}
+function updatePlayButtonText() {}
 
 /**
  * Update the progress bar
@@ -47,22 +32,9 @@ function updatePlayButtonText() {
  */
 function updateProgress() {
   // Update progress bar using video time divided by duration times 100
-  progress.value = (video.currentTime / video.duration) * 100;
-
   // Get minutes
-  let minutes = Math.floor(video.currentTime / 60);
-  if (minutes < 10) {
-    minutes = "0" + String(minutes);
-  }
-
   // Get seconds
-  let seconds = Math.floor(video.currentTime % 60);
-  if (seconds < 10) {
-    seconds = "0" + String(seconds);
-  }
-
   // Update timestamp
-  timestamp.textContent = `${minutes}:${seconds}`;
 }
 
 /**
@@ -71,9 +43,7 @@ function updateProgress() {
  * Set the video time to the progress bar value
  *
  */
-function setProgress() {
-  video.currentTime = (Number(progress.value) * video.duration) / 100;
-}
+function setProgress() {}
 
 video.addEventListener("click", playPause);
 video.addEventListener("play", updatePlayButtonText);
