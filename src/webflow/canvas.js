@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   resizeCanvas();
 
   // Flag to track the painting state
-  let painting = false;
 
   // Function called when the mouse button is pressed
   // Sets the painting flag to true and starts the drawing process
